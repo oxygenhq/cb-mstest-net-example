@@ -1,4 +1,4 @@
-﻿using CloudBeat.Frameworks.MSTest;
+﻿using CloudBeat.TDK.MSTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 

@@ -1,17 +1,23 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Diagnostics;
+using CloudBeat.TDK.MSTest.Attributes;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
 namespace MSTestExampleProject
 {
     [TestClass]
-    public class UnitTest : BaseTest
+    public class UnitTest
     {
-        [TestMethod]
+        public UnitTest()
+        {
+            Debugger.Launch();
+        }
+        [CbTestMethod]
         [TestCategory("test")]
         [Description("בדיקה")]
         public void TestMethod1()
         {
-            var linkText = "DRESSES";
+            /*var linkText = "DRESSES";
             _driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
             var link = _driver.FindElement(By.PartialLinkText(linkText));
             link.Click();
@@ -24,7 +30,7 @@ namespace MSTestExampleProject
             EndStep("customStep");
 
             var link4 = _driver.FindElement(By.Id("layered_id_attribute_group_16"));
-            link4.Click();
+            link4.Click();*/
         }
     }
 }
